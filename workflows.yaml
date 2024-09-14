@@ -1,0 +1,14 @@
+comment: 'Running main workflow with initial steps'
+main_tasks:
+  - comment: 'Initial step.'
+    subtasks:
+      - type: 'complex_sql'
+        file_location: './project/sql/init.sql'
+  - comment: 'Inserts.'
+    subtasks:
+      - type: 'complex_sql'
+        file_location: './project/sql/inserts.sql'
+  - comment: 'CRUD queries.'
+    subtasks:
+      - type: 'complex_sql'
+        file_location: './project/sql/crud_queries.sql'
